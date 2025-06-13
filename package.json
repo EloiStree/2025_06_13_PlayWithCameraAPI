@@ -1,0 +1,29 @@
+
+{                                                                                
+  "name": "be.elab.camerapi",                              
+  "displayName": "Play with camera API",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Camera API experiemt for fun and exploration",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "Demo on how to use the package",
+      "path": "Scene/Demo"
+    }
+  ] ,     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2025_06_13_PlayWithCameraAPI.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
