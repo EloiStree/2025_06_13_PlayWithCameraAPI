@@ -3,7 +3,8 @@
     "rootNamespace": "",
     "references": [
         "Oculus.VR",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "be.elab.texturetoolbox"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
