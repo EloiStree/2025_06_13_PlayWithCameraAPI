@@ -12799,37 +12799,17 @@ MonoBehaviour:
   installationRoutineCheckpoint:
     _installationRoutineId: 
     _installationVariants: []
---- !u!1 &1400486406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!114 &1400486408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8801718720627443009, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+  m_PrefabInstance: {fileID: 4729559033226903618}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1400486407}
-  m_Layer: 0
-  m_Name: Render Texture Coroutine Save
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1400486407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400486406}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52914, y: 0, z: 1.00508}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36ec707eace5f9409d9173033ca312a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1402686433
 GameObject:
   m_ObjectHideFlags: 0
@@ -20074,6 +20054,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 474583140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2083922301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2083922302}
+  - component: {fileID: 2083922303}
+  m_Layer: 0
+  m_Name: To Render Texture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2083922302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083922301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5297995901610354425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083922303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083922301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab76edeab8c51942b66cdde212342a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_selected: {fileID: 0}
+  m_result: {fileID: 0}
+  m_onRenderTextureCreated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1400486408}
+        m_TargetAssemblyTypeName: Eloi.TextureUtility.TextureMono_RenderTextureToFileRelativeSaveWithDate,
+          be.elab.texturetoolbox
+        m_MethodName: SetRenderTexture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_useUpdateBlit: 1
 --- !u!1 &2084589110
 GameObject:
   m_ObjectHideFlags: 0
@@ -20384,6 +20427,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1855035921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4729559033226903618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52914
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.00508
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88021174397816447, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273408180826600746, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
+      propertyPath: m_Name
+      value: Render Texture Coroutine Save
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30ffecf5b5e7c624193b7dbea4354aea, type: 3}
 --- !u!1001 &5297995901610354424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20400,6 +20500,30 @@ PrefabInstance:
       propertyPath: m_whatToFollow
       value: 
       objectReference: {fileID: 1985026356}
+    - target: {fileID: 7502496430399086778, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      propertyPath: m_onRelayed.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502496430399086778, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      propertyPath: m_onRelayed.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2083922303}
+    - target: {fileID: 7502496430399086778, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      propertyPath: m_onRelayed.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502496430399086778, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      propertyPath: m_onRelayed.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: PushInWebcamTexture
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502496430399086778, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      propertyPath: m_onRelayed.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Eloi.TextureUtility.TextureMono_WebCamTextureToRenderTexture, be.elab.texturetoolbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502496430399086778, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      propertyPath: m_onRelayed.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8246600934441104715, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.28263
@@ -20442,9 +20566,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9047616599730843208, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2083922302}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+--- !u!4 &5297995901610354425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9047616599730843208, guid: c2d987d2c22db8947863f40fb165db48, type: 3}
+  m_PrefabInstance: {fileID: 5297995901610354424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -20454,4 +20586,4 @@ SceneRoots:
   - {fileID: 635341817}
   - {fileID: 622794130}
   - {fileID: 5297995901610354424}
-  - {fileID: 1400486407}
+  - {fileID: 4729559033226903618}
