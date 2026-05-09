@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7047676844597515174}
-  - component: {fileID: 1748868316715821956}
   - component: {fileID: 7412840042211121785}
+  - component: {fileID: 8153113917332517638}
+  - component: {fileID: 2983850704500364329}
+  - component: {fileID: 4944310500690759266}
   m_Layer: 0
   m_Name: WebCamTextureManagerPrefab
   m_TagString: Untagged
@@ -33,21 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1748868316715821956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847449403238870662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9a7893e57c04c0db4114c70954b915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Eye: 0
-  RequestedResolution: {x: 0, y: 0}
-  CameraPermissions: {fileID: 7412840042211121785}
 --- !u!114 &7412840042211121785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +46,113 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f5e9631f3cd04da0acc02bc5b51f5d4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: be.elab.camerapi::PassthroughCameraSamples.PassthroughCameraPermissions
   PermissionRequestsOnStartup:
   - com.oculus.permission.USE_SCENE
+  - android.permission.CAMERA
+  - horizonos.permission.HEADSET_CAMERA
+--- !u!114 &8153113917332517638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847449403238870662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe713e6538cc2447a0dbe4be10318df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.camerapi::PassthroughCameraSamples.WebCamTextureManager
+  Eye: 0
+  RequestedResolution: {x: 1280, y: 960}
+  CameraPermissions: {fileID: 7412840042211121785}
+--- !u!114 &2983850704500364329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847449403238870662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f429f672fee99428a0e402fccc9f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.camerapi::Eloi.QuestCameraAPI.WebCamTextureManagerRelayMono
+  m_source: {fileID: 8153113917332517638}
+  m_inSource: {fileID: 0}
+  m_onRelayed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Eloi.PongTracking.TextureMono_SetMaterialsAndRendererWithTexture,
+          be.elab.texturetoolbox
+        m_MethodName: SetTexture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4944310500690759266}
+        m_TargetAssemblyTypeName: TextureMono_WebCamTextureToRenderTexture, be.elab.texturetoolbox
+        m_MethodName: PushInWebcamTexture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_relayAtEachFrame: 1
+--- !u!114 &4944310500690759266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847449403238870662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab76edeab8c51942b66cdde212342a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.texturetoolbox::TextureMono_WebCamTextureToRenderTexture
+  m_selected: {fileID: 0}
+  m_result: {fileID: 0}
+  m_onRenderTextureCreated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Eloi.TextureUtility.TextureMono_RenderTextureProcessList,
+          be.elab.texturetoolbox
+        m_MethodName: SetAndProcessGivenTexture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onRenderTextureBlit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Eloi.TextureUtility.TextureMono_RenderTextureProcessList,
+          be.elab.texturetoolbox
+        m_MethodName: SetAndProcessGivenTexture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_useUpdateBlit: 1

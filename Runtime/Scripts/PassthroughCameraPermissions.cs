@@ -23,8 +23,9 @@ namespace PassthroughCameraSamples
 
         public static readonly string[] CameraPermissions =
         {
+            "com.oculus.permission.USE_SCENE",
             "android.permission.CAMERA",          // Required to use WebCamTexture object.
-            "horizonos.permission.HEADSET_CAMERA" // Required to access the Passthrough Camera API in Horizon OS v74 and above.
+            "horizonos.permission.HEADSET_CAMERA", // Required to access the Passthrough Camera API in Horizon OS v74 and above.
         };
 
         public static bool? HasCameraPermission { get; private set; }
